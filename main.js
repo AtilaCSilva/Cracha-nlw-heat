@@ -1,7 +1,7 @@
 const linksSocialMedia = {
   github: 'AtilaCSilva',
   youtube: 'Rocketseat',
-  instagram: '@Rocketseat',
+  instagram: 'rocketseat_oficial',
   facebook: 'Rocketseat',
   twitter: 'Rocketseat'
 }
