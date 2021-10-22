@@ -1,0 +1,92 @@
+/*Cascating StyleSheet*/
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --gray: hsl(
+    240,
+    9%,
+    89%
+  ); /*Esse --gray é uma variavel, significa que todos os grays que virem daqui para frente, vão ter essa configuração */
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased; /**/
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.png);
+  width: 375px;
+  height: 812px;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--gray); /* Assim você utiliza a var declarada */
+}
+
+.avatar {
+  width: 10rem; /* O  rem tem uma relação com o px padrão da pagina, que é 16px. 1rem equivale a 16px.*/
+
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+
+.avatar span {
+  /* quando não há separação por vírgula significa que o css vai procurar dentro de avatar o span */
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img {
+  /*Vai pegar a outra imagem em avatar*/
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--gray);
+  text-decoration: none; /* Coisas decorativas como sublinhado, italico e negrito. */
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none; /*estilo de lista: nenhum */
+  padding: 0; /*Preenchimento*/
+  display: flex; /*flex: trabalha com o eixo x,y */
+  gap: 0.5rem; /* Sem o display flex ou grid, vc ñ poderia usar o gap nem o justify-content */
+
+  justify-content: center; /*Forma do mayk. Essa forma tambem deixa o alinhamento no centro. O justify-content, align-items, display flex, flex, grid, display grid, place-items, gap... São todos formas de alinhamento que verás mais a fundo depois.*/
+}
